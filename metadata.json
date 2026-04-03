@@ -1,0 +1,7 @@
+{
+  "name": "Onyx Logic",
+  "description": "A sophisticated AI automation suite for specialists, featuring efficiency auditing, ROI calculation, and multi-agent system design in an elegant dark-mode interface.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
