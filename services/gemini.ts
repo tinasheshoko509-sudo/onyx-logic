@@ -2,8 +2,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
 const getAIClient = () => {
-  return new GoogleGenAI({ apiKey: process.env.API_KEY });
-};
+  return new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY});
 
 /**
  * Neural Integrity Utility:
