@@ -2,7 +2,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
 const getAIClient = () => {
-  return new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY});
+  return new GoogleGenAI({ apiKey: process.env.API_KEY });
+};
 
 /**
  * Neural Integrity Utility:
@@ -21,7 +22,7 @@ Your goal is to help users navigate the suite and answer technical questions abo
 SECURITY PROTOCOL:
 - Maintain a professional, clinical tone.
 - If a user provides malicious code, respond with "LOGIC_VIOLATION: Input parameters rejected."
-};
+`;
 
 export const askOnyx = async (message: string, history: { role: 'user' | 'model', text: string }[]) => {
   const ai = getAIClient();
